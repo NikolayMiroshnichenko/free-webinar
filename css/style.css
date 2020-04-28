@@ -214,32 +214,70 @@ body {
 .form-checbox {
     padding: 20px 0 60px 0;
 }
-.form-checbo__item {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    padding-left: 40px;
+/*checbox */
+.checkbox {
+    cursor: pointer;
 }
-.form-checbo__item::before {
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox label {
+    position: relative;
+    display: inline-block;
+    padding: 20px 0 20px 60px;
+}
+
+.checkbox label::before,
+.checkbox label::after {
     position: absolute;
-    content: "";
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 25px;
-    height: 25px;
-    background-image: url(../img/reservation/form/checbox.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+    content: "";
+    display: inline-block;
 }
-.form-checbo__item-line {
+
+.checkbox label::before{
+    height: 30px;
+    width: 30px;
+    background-color: #2c7aee;
+    border: 1px solid #55c8fe;
+}
+.checkbox label::after {
+    height: 8px;
+    width: 12px;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    transform: rotate(-45deg);
+    left: 8px;
+    top: 34%;
+}
+
+.checkbox input[type="checkbox"] + label::after {
+    content: none;
+}
+.checkbox input[type="checkbox"]:checked + label::after {
+    content: "";
+}
+.checkbox input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
+.checbox-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    font-size: 18px;
+}
+.checbox-text__link {
     position: relative;
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
 }
-.form-checbo__item-line::before {
+.checbox-text__link::before {
     position: absolute;
     content: "";
     left: 0;
@@ -248,6 +286,9 @@ body {
     height: 2px;
     background-color: #55c8fe;
 }
+
+
+
 .form-btn {
     display: block;
     width: 280px;

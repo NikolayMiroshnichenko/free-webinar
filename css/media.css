@@ -237,6 +237,12 @@
     .thank {
         width: 100%;
     }
+    .form-checbox {
+        padding: 0 0 40px 0;
+    }
+    .checkbox label::after {
+        top: 40%;
+    }
 }
 @media (max-width: 340px) {
     .main-btn {

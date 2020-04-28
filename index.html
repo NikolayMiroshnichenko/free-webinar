@@ -6,6 +6,7 @@
     <title>webinar</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/timer.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900&display=swap" rel="stylesheet">
 
@@ -20,17 +21,49 @@
             <div class="main-item">
                 <h1 class="main-item__title"><span>Free</span>  Myofunctional Orthodontics Webinar Training Programme</h1>
                 <p class="main-item__des">by Dr. John Flutter</p>
+                <div class="timer-wrapper">
+                    <div class="ce-countdown ce-countdown--theme-9">
+                        <div class="ce-circle">
+                            <canvas id="ce-days" width="408" height="408"></canvas>
+                            <div class="ce-circle__values">
+                                <span class="ce-digit ce-days"></span>
+                                <span class="ce-label ce-days-label"></span>
+                            </div>
+                        </div>
+                        <div class="ce-circle">
+                            <canvas id="ce-hours" width="408" height="408"></canvas>
+                            <div class="ce-circle__values">
+                                <span class="ce-digit ce-hours"></span>
+                                <span class="ce-label ce-hours-label"></span>
+                            </div>
+                        </div>
+                        <div class="ce-circle">
+                            <canvas id="ce-minutes" width="408" height="408"></canvas>
+                            <div class="ce-circle__values">
+                                <span class="ce-digit ce-minutes"></span>
+                                <span class="ce-label ce-minutes-label"></span>
+                            </div>
+                        </div>
+                        <!-- <div class="ce-circle">
+                            <canvas id="ce-seconds" width="408" height="408"></canvas>
+                            <div class="ce-circle__values">
+                                <span class="ce-digit ce-seconds"></span>
+                                <span class="ce-label ce-seconds-label"></span>
+                            </div>
+                        </div> -->
+                    </div>
+                </div> 
                 <div class="main-btn">
                     <h2 class="main-btn__title">Sign up for Free Webinar via:</h2>
                     <div class="main-btn-list">
                         <a href="#" class="main-btn-list__btn fbm">Facebook Messenger</a>
-                        <a href="#form-block" class="main-btn-list__btn register-form">Registration Form</a>
+                        <a href="#form-block" class="main-btn-list__btn register-form anchors">Registration Form</a>
                     </div>
                 </div>
             </div>
             <img src="img/main/pic-dantist.svg" class="main-img" alt="">
         </div>
-        <a href="#" class="main-btn-bottom">Learn more</a>
+        <a href="#webinar-outline" class="main-btn-bottom anchors">Learn more</a>
     </section>
     <section class="reservation container" id="form-block">
         <h2 class="reservation-title">Book your seat at the webinar!</h2>
@@ -48,8 +81,11 @@
                     <input type="phone" class="input" placeholder="Your Phone">
                 </div>
                 <div class="form-checbox">
-                    <a href="#" class="form-checbo__item">I agree all statements in <span class="form-checbo__item-line">Terms of service</span></a>
-                </div>
+                    <div class="checkbox">
+                        <input type="checkbox" checked="checked" id="checkbox_1">
+                        <label for="checkbox_1" class="checbox-text">I agree all statements in <a href="index.html" class="checbox-text__link">Terms of service</a></label>
+                    </div>
+                </div>               
                 <button type="submit" class="form-btn">Register</button>
             </form>
 
@@ -70,7 +106,7 @@
             <a href="#" class="dont-postpone__btn">Facebook Messenger</a>
         </div>
     </section>
-    <section class="webinar-outline container">
+    <section class="webinar-outline container" id="webinar-outline">
         <h2 class="webinar-outline__title">Webinar outline</h2>
         <p class="webinar-outline__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
         <div class="webinar-outline-content">
@@ -90,7 +126,7 @@
                 <li class="webinar-outline-list__item">Getting Started</li>
             </ul>
         </div>
-        <a href="#form-block" class="webinar-outline__btn">Register for free</a>
+        <a href="#form-block" class="webinar-outline__btn anchors">Register for free</a>
     </section>
     <section class="facts-wrapper">
         <div class="facts container">
@@ -118,7 +154,7 @@
             <h2 class="participate-title">I want to participate</h2>
             <div class="participate-btn">
                 <a href="#" class="participate-btn__item fbm-participate">via FB Messenger</a>
-                <a href="#form-block" class="participate-btn__item form-participate">via Registration Form</a>
+                <a href="#form-block" class="participate-btn__item form-participate anchors">via Registration Form</a>
             </div>
         </div>
     </section>
@@ -128,5 +164,8 @@
     </footer>
  
     <script src="js/index.js"></script>
+    <script src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/jquery.counteverest.min.js"></script>
+    <script src="js/timer.js"></script>
 </body>
 </html>

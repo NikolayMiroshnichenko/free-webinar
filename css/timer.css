@@ -1,0 +1,104 @@
+.timer-wrapper {
+    width: 70%;
+}
+.ce-countdown--theme-9 {
+	/* background-color: #000;  */
+	color: #fff;
+	font-family: 'Open Sans';
+	font-size: 0;
+	font-weight: 300;
+	max-width: none;
+	padding: 50px 30px;
+	text-align: center;
+}
+
+.ce-countdown--theme-9 .ce-circle {
+	display: inline-block;
+	margin: -10px;
+	position: relative;
+	vertical-align: top;
+}
+
+.ce-countdown--theme-9 canvas {
+	display: inline-block;
+	height: 124px;
+	width: 124px;
+}
+
+.ce-countdown--theme-9 .ce-circle__values {
+	height: 70px;
+	margin-top: -30px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+}
+
+.ce-countdown--theme-9 .ce-digit,
+.ce-countdown--theme-9 .ce-label  {
+	display: block;
+	line-height: 1;
+}
+
+.ce-countdown--theme-9 .ce-digit  {
+	display: block;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.ce-countdown--theme-9 .ce-label  {
+    color: #ffffff;
+	display: block;
+	font-size: 12px;
+	margin-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+    .timer-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+/* @media all and (max-width: 900px) {
+	.ce-countdown--theme-9 canvas {
+		height: 164px;
+		width: 164px;
+	}
+
+	.ce-countdown--theme-9 .ce-digit  {
+		font-size: 35px;
+    }
+    
+}
+
+
+
+@media all and (max-width: 400px) {
+	.ce-countdown--theme-9 .ce-circle {
+		margin: -30px;
+		display: block;
+	}
+
+	.ce-countdown--theme-9 canvas {
+		height: 134px;
+		width: 134px;
+	}
+
+	.ce-countdown--theme-9 .ce-circle__values {
+		margin-top: -30px;
+	}
+
+	.ce-countdown--theme-9 .ce-digit  {
+		font-size: 30px;
+	}
+
+	.ce-countdown--theme-9 .ce-label  {
+		font-size: 12px;
+		margin-top: 8px;
+	}
+} */
