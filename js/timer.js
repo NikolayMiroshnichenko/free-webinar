@@ -9,7 +9,7 @@ $(document).ready(function() {
 			drawCircle($('#ce-days').get(0), this.days, 365);
 			drawCircle($('#ce-hours').get(0), this.hours, 24);
 			drawCircle($('#ce-minutes').get(0), this.minutes, 60);
-			// drawCircle($('#ce-seconds').get(0), this.seconds, 60);
+			drawCircle($('#ce-seconds').get(0), this.seconds, 60);
 		}
 	});
 
